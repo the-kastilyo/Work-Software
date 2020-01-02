@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jan  2 12:25:13 2020
+
 
 @author: mcastillo
 """
@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-with open(r'C:\Users\mcastillo\Desktop\Loading Plan_Copy\hope_this_works.html','r',encoding="UTF8",errors='ignore') as f:
+with open(r'C:\path\foo.html','r',encoding="UTF8",errors='ignore') as f:
     contents = f.read()
     soup = BeautifulSoup(contents.encode("UTF8"),'lxml')
     f.close()
@@ -32,7 +32,7 @@ df['Heat'] = df['Heat'].apply(lambda x: x/1000)
 df = df.groupby('Date')['Heat'].mean()
 
 
-#df.to_excel(r'C:\Users\mcastillo\Desktop\Loading Plan_Copy\Heat_extract_unit2_HLZC4.xlsx')
+#df.to_excel(r'C:\path\foofoo.xlsx')
 
 # Plotting Option
 #sns.set(font_scale=1.4)
